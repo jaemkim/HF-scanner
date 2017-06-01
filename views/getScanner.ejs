@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+  </head>
+  <body>
+
+    <h2><%= title %></h2>
+<table class="table" id="tblData">
+        <thead>
+        <tr>
+        <th>Scanner ID</th>
+        <th>Location</th>
+        <th>MAC</th>
+        <th>Alive Date</th>
+        </tr>
+        </thead>
+            <tbody id="tblDataBody">
+            <% lists.forEach(function(list) { %>
+                <tr>
+                    <td><%= list.id %></td>
+                    <td><%= list.loc %></td>
+                    <td><%= list.mac %></td>
+                    <td><%= list.alive %></td>
+                </tr>
+            <%  }) %>
+            </tbody>
+</table>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+  </head>
+  <body>
+
+    <h2><%= title1 %></h2>
+<table class="table1" id="tblData1">
+        <thead>
+        <tr>
+        <th>Scanner ID</th>
+        <th>Location</th>
+        <th>MAC</th>
+        <th>Alive Date</th>
+        </tr>
+        </thead>
+            <tbody id="tblDataBody1">
+            <% lists1.forEach(function(list) { %>
+                <tr>
+                    <td><%= list.id %></td>
+                    <td><%= list.loc %></td>
+                    <td><%= list.mac %></td>
+                    <td><%= list.alive %></td>
+                </tr>
+            <%  }) %>
+            </tbody>
+</table>
+
+<h2><%= title2 %></h2>
+<table class="table2" id="tblData2">
+        <thead>
+        <tr>
+        <th>이름</th>
+        <th>Major ID</th>
+        <th>Minor ID</th>
+        <th>Scanner ID</th>
+        </tr>
+        </thead>
+            <tbody id="tblDataBody2">
+            <% lists2.forEach(function(list) { %>
+                <tr>
+                    <td><%= list.name %></td>
+                    <td><%= list.mjid %></td>
+                    <td><%= list.mnid %></td>
+                    <td><%= list.scid %></td>
+                </tr>
+            <%  }) %>
+            </tbody>
+</table>
+
+  </body>
+</html>
+

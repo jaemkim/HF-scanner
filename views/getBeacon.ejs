@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+  </head>
+  <body>
+
+<h2><%= title %></h2>
+<table class="table" id="tblData">
+        <thead>
+        <tr>
+        <th>이름</th>
+        <th>Major ID</th>
+        <th>Minor ID</th>
+        <th>Scanner ID</th>
+        </tr>
+        </thead>
+            <tbody id="tblDataBody">
+            <% lists.forEach(function(list) { %>
+                <tr>
+                    <td><%= list.name %></td>
+                    <td><%= list.mjid %></td>
+                    <td><%= list.mnid %></td>
+                    <td><%= list.scid %></td>
+                </tr>
+            <%  }) %>
+            </tbody>
+</table>
+  </body>
+</html>
