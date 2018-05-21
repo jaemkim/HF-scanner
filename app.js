@@ -23,7 +23,10 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://localhost/symloc');
+mongoose.connect('mongodb://localhost/symloc', {
+  useMongoClient: true,
+    /* other options */
+	});
 
 // DEFINE MODEL
 var Sid = require('./models/sid');
